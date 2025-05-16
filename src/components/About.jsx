@@ -2,13 +2,10 @@ import React from 'react'
 
 const About = () => {
   return (
-   <div id='about' className='mt-8 w-full'>
-      <div className='w-full flex justify-center'>
-        <h1 className='text-black font-extrabold text-[35px] text-center'>About Me</h1>
-      </div>
-      
+   <div id='about' className='mt-7 w-full '>
+  
       <h2 className='text-pink-600 font-extrabold text-[35px] mt-10'>My Journey</h2>
-      <div className='text-xl text-gray-600 flex flex-col gap-10'>
+      <div className='text-xl text-gray-600 flex flex-col gap-7'>
         <p>
           Hello! I'm Lohitha, an aspiring Full Stack Web developer currently pursuing my B.Tech 3rd year in Artificial Intelligence and Machine Learning.
         </p>

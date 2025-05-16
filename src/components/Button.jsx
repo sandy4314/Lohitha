@@ -7,7 +7,7 @@ const Button = ({ children, onClick }) => {
         e.preventDefault();
         if (onClick) onClick();
       }}
-      className="cursor-pointer bg-pink-600  text-white font-[Poppins] py-3 px-6 rounded-full   hover:bg-pink-400 duration-500"
+      className="cursor-pointer bg-pink-600  text-white font-[Poppins] py-3 px-4 rounded-full   hover:bg-pink-400 duration-500"
     >
       {children}
     </button>

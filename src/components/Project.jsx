@@ -96,7 +96,7 @@ const Project = () => {
   };
 
   return (
-    <div className="p-8 bg-gray-50 ">
+    <div className="p-8 bg-gray-50 " id='projects'>
       <h2 className="text-3xl font-bold text-center mb-2">My Projects</h2>
       <p className="text-center text-gray-600 mb-6">
         Explore my portfolio of projects spanning different technologies and domains.

@@ -12,7 +12,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="bg-gray-50 p-6 md:p-12">
+    <div className="bg-gray-50 p-6 md:p-12" id='contact'>
       <div className="text-center">
         <h1 className="text-3xl font-bold text-gray-800 mb-2">Get in Touch</h1>
         <p className="text-gray-600 mb-6">Have a question? Feel free to reach out.</p>
@@ -73,12 +73,12 @@ const Contact = () => {
         <div className="w-full md:w-1/2 bg-white shadow-lg rounded-lg p-6 md:p-10 flex flex-col justify-between">
           <div>
             <h1 className="text-3xl font-bold text-pink-600 mb-4">Contact Information</h1>
-            <p className="text-gray-400 mb-6">
+            <p className="text-gray-600 mb-6">
               I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
             </p>
 
             <div className="mb-4">
-              <div className='flex gap-2  '><i className="fas fa-envelope text-2xl text-pink-600 "></i>           <p className="text-sm font-semibold text-gray-700">Email</p></div>
+              <div className='flex gap-2  '><i className="fas fa-envelope text-2xl text-transparent bg-pink-600  bg-clip-text"></i>           <p className="text-sm font-semibold text-gray-700">Email</p></div>
               <p className="text-pink-400">itsmelohitha@gmail.com</p>
             </div>
 
