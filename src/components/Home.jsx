@@ -27,10 +27,10 @@ const Home = () => {
   
 
   return (
-    <div id="home" className="mt-24   flex flex-col-reverse md:flex-row items-center md:items-start px-6 lg:px-28">
+    <div id="home" className="mt-24  ml-7 flex flex-col-reverse md:flex-row items-center md:items-start px-6 lg:px-28">
       
       {/* Text Section */}
-      <div className="md:mt-36 lg:mt-36 mt-10 text-center md:text-left md:w-1/2" data-aos="fade-up" data-aos-duration="1000">
+      <div className="md:mt-14 mt-10 text-center md:text-left md:w-1/2" data-aos="fade-up" data-aos-duration="1000">
         <h1 className="text-2xl  md:text-3xl flex flex-col gap-2">
           <span className='text-pink-400 '>Hello ,I'm</span>
           <span className='font-bold text-[45px] '>Lohitha</span>
@@ -43,7 +43,7 @@ const Home = () => {
           Passionate about creating intelligent solutions and building innovative applications
           that make a difference
         </p>
-        <div className="mt-11 flex justify-center md:justify-start space-x-2">
+        <div className="mt-11 flex justify-center md:justify-start space-x-2 ">
           <Button onClick={handleResumeClick}>VIEW RESUME</Button>
           <Button onClick={handleConnectClick}>LET'S CONNECT</Button>
         </div>

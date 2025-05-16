@@ -2,7 +2,7 @@ import React from 'react';
 
 const SkillCard = (props) => {
   return (
-    <div className=" h-[170px] border border-gray-300 rounded-xl shadow-lg p-6 max-w-md w-full bg-white">
+    <div className=" h-[180px] border border-gray-300 rounded-xl shadow-lg p-6 max-w-md w-full bg-white">
       {/* Header */}
       <div className="flex items-center space-x-3 mb-4">
         <span className="px-2 py-1 rounded-full bg-pink-600 text-white text-lg">

@@ -120,10 +120,7 @@ const Project = () => {
       </div>
 
       <div className="flex items-center justify-center gap-4">
-        <button onClick={handlePrev} disabled={currentIndex === 0}>
-          <FaArrowLeft className="text-xl text-gray-600 hover:text-pink-600" />
-        </button>
-
+      
         <div className="flex gap-6 overflow-hidden transition-all duration-300">
           {visibleProjects.map((project) => (
             <div
@@ -154,13 +151,19 @@ const Project = () => {
           ))}
         </div>
 
+        
+      </div>
+      <div className='flex justify-center gap-5 p-5'>
+        <button onClick={handlePrev} disabled={currentIndex === 0}>
+          <FaArrowLeft className="cursor-pointer text-3xl text-gray-600 hover:text-pink-600 bg-white border border-gray-300 rounded-full p-1 w-full" />
+        </button>
         <button
           onClick={handleNext}
           disabled={currentIndex + 3 >= filteredProjects.length}
         >
-          <FaArrowRight className="text-xl text-gray-600 hover:text-pink-600" />
+          <FaArrowRight className="cursor-pointer text-3xl text-gray-600 hover:text-pink-600 bg-white border border-gray-300 rounded-full p-1 w-full" />
         </button>
-      </div>
+      </div> 
     </div>
   );
 };
