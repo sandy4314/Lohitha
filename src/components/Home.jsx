@@ -27,7 +27,7 @@ const Home = () => {
   
 
   return (
-    <div id="home" className="mt-24  ml-7 flex flex-col-reverse md:flex-row items-center md:items-start px-6 lg:px-28">
+    <div id="home" className="mt-30  ml-7 flex flex-col-reverse md:flex-row items-center md:items-start px-6 lg:px-28">
       
       {/* Text Section */}
       <div className="md:mt-14 mt-10 text-center md:text-left md:w-1/2" data-aos="fade-up" data-aos-duration="1000">

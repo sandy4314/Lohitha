@@ -12,7 +12,7 @@ const Contact = () => {
   };
 
   return (
-    <div className=" p-6 md:p-12" id='contact'>
+    <div className=" p-6 md:p-12 mb-30 mt-10"  id='contact'>
       <div className="text-center">
         <h1 className="text-3xl font-bold  mb-2">Get in Touch</h1>
         <p className="text-gray-600 mb-6">Have a question? Feel free to reach out.</p>

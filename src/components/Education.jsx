@@ -20,7 +20,7 @@ const educationData = [
 
 export default function Education() {
   return (
-    <div className="lg:py-10">
+    <div className="lg:py-1">
       <h2 className="text-[40px] font-bold text-pink-600 mb-8">Education</h2>
       <div className="relative border-l-4 border-pink-300 pl-6">
         {educationData.map((edu, index) => (
