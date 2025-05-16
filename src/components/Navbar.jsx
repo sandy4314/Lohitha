@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import { Link } from 'react-scroll'; // Import Link from react-scroll
-
+import React, { useState } from "react";
+import { Link } from "react-scroll";
+import ThemeToggle from "./ThemeToggle";
 
 const Navbar = () => {
   let Links = [
@@ -14,50 +14,75 @@ const Navbar = () => {
   let [open, setOpen] = useState(false);
 
   return (
-    <div className="min-h-[64px] w-full fixed top-0 left-0 bg-white z-50">
-      <div className="md:flex items-center justify-between bg-white py-4 md:px-10 px-7">
-        <div className="text-pink-500 font-bold text-2xl cursor-pointer flex items-center font-[Poppins] ">
-          <span className="text-3xl  mr-1 pt-2">
+    <nav className="fixed top-0 left-0 w-full bg-base-100 text-base-content shadow-md z-50">
+      <div className="max-w-7xl mx-auto flex justify-between items-center px-6 md:px-10 py-4">
+        {/* Logo */}
+        <div className="flex items-center cursor-pointer font-bold text-2xl font-[Poppins] text-pink-500 select-none">
+          <span className="text-3xl mr-1 pt-1">
             <ion-icon name="laptop-outline"></ion-icon>
           </span>
           Lohitha
         </div>
 
-        
-        <div
-            onClick={() => setOpen(!open)}
-            className="text-3xl md:hidden fixed top-6 right-6 cursor-pointer z-50 text-black">
-            <ion-icon name={open ? 'close' : 'menu'}></ion-icon>
-        </div>
-
-        <ul
-            className={`
-            md:flex md:items-center md:static md:flex-row md:bg-white md:h-auto md:w-auto md:pt-0
-            fixed top-0 right-0 h-screen w-1/2 bg-pink-500 flex flex-col items-center pt-24 transition-all duration-500 ease-in-out z-40
-          ${open ? 'right-0' : 'right-[-100%]'}
-            `}
-        >
-        {Links.map((link) => (
-            <li key={link.name} className="text-xl my-4 md:ml-8 md:my-0">
-            <Link
+        {/* Desktop Links */}
+        <ul className="hidden md:flex space-x-8 items-center">
+          {Links.map((link) => (
+            <li key={link.name}>
+              <Link
                 to={link.link}
                 smooth={true}
                 offset={-70}
                 duration={500}
-                className="text-white md:text-gray-800 cursor-pointer hover:text-gray-300 md:hover:text-gray-400 duration-300"
-                onClick={() => setOpen(false)} // Optional: auto-close on mobile
-            >
+                className="cursor-pointer hover:text-pink-500 transition-colors duration-300"
+              >
                 {link.name}
-            </Link>
+              </Link>
             </li>
-  ))}
-</ul>
+          ))}
+          {/* Theme Toggle on desktop */}
+          <li>
+            <ThemeToggle />
+          </li>
+        </ul>
 
+        {/* Mobile menu icon + Theme Toggle */}
+        <div className="flex items-center md:hidden space-x-4">
+          {/* Theme toggle visible on mobile */}
+          <ThemeToggle />
 
-        
-
+          {/* Hamburger / Close icon */}
+          <button
+            onClick={() => setOpen(!open)}
+            className="relative text-3xl focus:outline-none text-base-content "
+            aria-label="Toggle menu"
+          >
+            <ion-icon name={open ? "close" : "menu"}></ion-icon>
+          </button>
+        </div>
       </div>
-    </div>
+
+      {/* Mobile Menu */}
+      <ul
+        className={`md:hidden fixed top-0 right-0 h-full w-3/4 bg-pink-500 text-white flex flex-col pt-20 px-8 space-y-8 transform transition-transform duration-300 ease-in-out z-40 ${
+          open ? "translate-x-0" : "translate-x-full"
+        }`}
+      >
+        {Links.map((link) => (
+          <li key={link.name} className="text-2xl font-semibold">
+            <Link
+              to={link.link}
+              smooth={true}
+              offset={-70}
+              duration={500}
+              className="cursor-pointer hover:text-black transition-colors duration-300"
+              onClick={() => setOpen(false)} // close menu on click
+            >
+              {link.name}
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </nav>
   );
 };
 

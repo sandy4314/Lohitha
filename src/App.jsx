@@ -14,7 +14,7 @@ const App = () => {
 <Home />
 
 {/* About Section Heading - Full Width */}
-<h1 className="text-center text-[35px] font-bold text-black mt-20 mb-6">About Me</h1>
+<h1 className="text-center text-[35px] font-bold  mt-20 mb-6">About Me</h1>
 
 {/* Responsive Side-by-Side About and Education */}
 <div className="flex flex-col lg:flex-row items-start justify-between gap-10 px-4 sm:px-6 md:px-10 lg:px-20 xl:px-32">

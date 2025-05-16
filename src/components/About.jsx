@@ -4,8 +4,8 @@ const About = () => {
   return (
    <div id='about' className='mt-7 w-full '>
   
-      <h2 className='text-pink-600 font-extrabold text-[35px] mt-10'>My Journey</h2>
-      <div className='text-xl text-gray-600 flex flex-col gap-7'>
+      <h2 className='text-pink-600 font-bold text-[35px] mt-10'>My Journey</h2>
+      <div className='text-xl text-gray-500 flex flex-col gap-7'>
         <p>
           Hello! I'm Lohitha, an aspiring Full Stack Web developer currently pursuing my B.Tech 3rd year in Artificial Intelligence and Machine Learning.
         </p>

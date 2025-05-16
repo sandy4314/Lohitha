@@ -12,9 +12,9 @@ const Contact = () => {
   };
 
   return (
-    <div className="bg-gray-50 p-6 md:p-12" id='contact'>
+    <div className=" p-6 md:p-12" id='contact'>
       <div className="text-center">
-        <h1 className="text-3xl font-bold text-gray-800 mb-2">Get in Touch</h1>
+        <h1 className="text-3xl font-bold  mb-2">Get in Touch</h1>
         <p className="text-gray-600 mb-6">Have a question? Feel free to reach out.</p>
       </div>
 
@@ -22,7 +22,7 @@ const Contact = () => {
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-10">
 
         {/* Contact Form */}
-        <div className="w-full md:w-1/2 bg-white shadow-lg rounded-lg p-6 md:p-10">
+        <div className="w-full md:w-1/2 shadow-lg rounded-lg p-6 md:p-10">
           <form className="space-y-4">
             <div>
               <label className="block mb-1 font-medium text-gray-700">Name</label>
@@ -70,7 +70,7 @@ const Contact = () => {
         </div>
 
         {/* Contact Info */}
-        <div className="w-full md:w-1/2 bg-white shadow-lg rounded-lg p-6 md:p-10 flex flex-col justify-between">
+        <div className="w-full md:w-1/2  shadow-lg rounded-lg p-6 md:p-10 flex flex-col justify-between">
           <div>
             <h1 className="text-3xl font-bold text-pink-600 mb-4">Contact Information</h1>
             <p className="text-gray-600 mb-6">

@@ -39,7 +39,7 @@ const Home = () => {
           Full Stack Web Developer<br/>
           AI & ML Enthusiast
         </h1>
-        <p className="mt-5 text-gray-600 text-lg md:text-xl leading-relaxed">
+        <p className="mt-5 text-gray-500 text-lg md:text-xl leading-relaxed">
           Passionate about creating intelligent solutions and building innovative applications
           that make a difference
         </p>

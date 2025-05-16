@@ -2,13 +2,13 @@ import React from 'react';
 
 const SkillCard = (props) => {
   return (
-    <div className=" h-[180px] border border-gray-300 rounded-xl shadow-lg p-6 max-w-md w-full bg-white">
+    <div className=" h-[180px] border border-gray-300 rounded-xl shadow-lg p-6 max-w-2xl w-full ">
       {/* Header */}
       <div className="flex items-center space-x-3 mb-4">
         <span className="px-2 py-1 rounded-full bg-pink-600 text-white text-lg">
           <ion-icon name={props.name}></ion-icon>
         </span>
-        <h1 className="text-xl font-semibold text-gray-800">{props.title}</h1>
+        <h1 className="text-xl font-semibold text-pink-600">{props.title}</h1>
       </div>
 
       {/* Skills List */}
