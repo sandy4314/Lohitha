@@ -1,23 +1,14 @@
-// src/components/ThemeToggle.jsx
-import { useTheme } from 'next-themes';
-import { useEffect, useState } from 'react';
+import React from 'react';
+import { Sun, Moon } from 'lucide-react';
 
-const ThemeToggle = () => {
-  const { theme, setTheme, systemTheme } = useTheme();
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => setMounted(true), []);
-  if (!mounted) return null; // avoid hydration mismatch
-
-  const currentTheme = theme === 'system' ? systemTheme : theme;
-
+const ThemeToggle = ({ theme, toggleTheme }) => {
   return (
     <button
-      className="btn btn-sm btn-outline"
-      onClick={() => setTheme(currentTheme === 'dark' ? 'light' : 'dark')}
+      onClick={toggleTheme}
+      className="fixed top-4 right-4 p-2 rounded-md bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white z-50"
       aria-label="Toggle Dark Mode"
     >
-      {currentTheme === 'dark' ? '☀️' : '🌚'}
+      {theme === 'light' ? <Moon size={20} /> : <Sun size={20} />}
     </button>
   );
 };

@@ -96,9 +96,9 @@ const Project = () => {
   };
 
   return (
-    <div className="p-8 mt-20 md:mt-36" id='projects'>
+    <div className="p-8 mt-20 md:mt-36 bg-white dark:bg-gray-900 text-black dark:text-white" id='projects'>
       <h2 className="text-3xl font-bold text-center mb-2">My Projects</h2>
-      <p className="text-center text-gray-600 mb-6">
+      <p className="text-center text-gray-600 dark:text-gray-300 mb-6">
         Explore my portfolio of projects spanning different technologies and domains.
       </p>
 
@@ -111,7 +111,9 @@ const Project = () => {
               setCurrentIndex(0);
             }}
             className={`px-10 py-2 rounded-full text-sm ${
-              selectedType === option ? 'bg-pink-600 text-white' : 'bg-gray-200'
+              selectedType === option
+                ? 'bg-pink-600 text-white'
+                : 'bg-gray-200 dark:bg-gray-700 dark:text-white'
             }`}
           >
             {option}
@@ -120,12 +122,11 @@ const Project = () => {
       </div>
 
       <div className="flex items-center justify-center gap-4">
-      
         <div className="flex gap-6 overflow-hidden transition-all duration-300">
           {visibleProjects.map((project) => (
             <div
               key={project.id}
-              className="bg-white rounded-xl shadow-md w-80 flex-shrink-0"
+              className="bg-white dark:bg-gray-800 rounded-xl shadow-md w-80 flex-shrink-0"
               data-aos="fade-up"
             >
               <div className="relative">
@@ -140,28 +141,26 @@ const Project = () => {
               </div>
               <div className="p-4">
                 <h3 className="font-semibold text-lg mb-1">{project.title}</h3>
-                <p className="text-sm text-gray-600 mb-3">{project.description}</p>
+                <p className="text-sm text-gray-600 dark:text-gray-300 mb-3">{project.description}</p>
                 <div className="flex gap-2">
                   <button className='bg-pink-600 w-28 h-10 rounded-xl m-4 text-white font-semibold hover:bg-pink-300'><a href={project.link1}>Repo link</a></button>
                   <button className='bg-pink-600 w-28 h-10 rounded-xl m-4 text-white font-semibold hover:bg-pink-300'><a href={project.link2}>Live</a></button>
-                   
                 </div>
               </div>
             </div>
           ))}
         </div>
-
-        
       </div>
+
       <div className='flex justify-center gap-5 p-5'>
         <button onClick={handlePrev} disabled={currentIndex === 0}>
-          <FaArrowLeft className="cursor-pointer text-3xl text-gray-600 hover:text-pink-600 bg-white border border-gray-300 rounded-full p-1 w-full" />
+          <FaArrowLeft className="cursor-pointer text-3xl text-gray-600 dark:text-gray-300 hover:text-pink-600 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-full p-1 w-full" />
         </button>
         <button
           onClick={handleNext}
           disabled={currentIndex + 3 >= filteredProjects.length}
         >
-          <FaArrowRight className="cursor-pointer text-3xl text-gray-600 hover:text-pink-600 bg-white border border-gray-300 rounded-full p-1 w-full" />
+          <FaArrowRight className="cursor-pointer text-3xl text-gray-600 dark:text-gray-300 hover:text-pink-600 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-full p-1 w-full" />
         </button>
       </div> 
     </div>

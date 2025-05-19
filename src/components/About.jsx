@@ -1,11 +1,10 @@
-import React from 'react'
+import React from 'react';
 
 const About = () => {
   return (
-   <div  className=' w-full '>
-  
-      <h2 className='text-pink-600 font-bold text-[35px] '>My Journey</h2>
-      <div className='text-xl text-gray-500 flex flex-col gap-7'>
+    <div className='w-full'>
+      <h2 className='text-pink-600 dark:text-pink-400 font-bold text-[35px]'>My Journey</h2>
+      <div className='text-xl text-gray-500 dark:text-gray-300 flex flex-col gap-7'>
         <p>
           Hello! I'm Lohitha, an aspiring Full Stack Web developer currently pursuing my B.Tech 3rd year in Artificial Intelligence and Machine Learning.
         </p>
@@ -20,7 +19,7 @@ const About = () => {
         </p>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default About
+export default About;

@@ -1,44 +1,43 @@
-import React from 'react'
-import SkillCard from '../cards/SkillCard'
+import React from 'react';
+import SkillCard from '../cards/SkillCard';
 
 const Skills = () => {
-    const data=[{
-        title:"Programming",
-        name:"heart",
-        skills:["Python","Java","C"]
+  const data = [
+    {
+      title: "Programming",
+      name: "heart",
+      skills: ["Python", "Java", "C"]
     },
     {
-     title:"Web Development",
-        name:"heart",
-        skills:["HTML","CSS","JavaScript","React Js","Tailwind CSS","PHP"]
+      title: "Web Development",
+      name: "heart",
+      skills: ["HTML", "CSS", "JavaScript", "React Js", "Tailwind CSS", "PHP"]
     },
     {
-     title:"Database",
-        name:"heart",
-        skills:["SQL","MONGODB"]
+      title: "Database",
+      name: "heart",
+      skills: ["SQL", "MONGODB"]
     },
     {
-     title:"Tools & platforms",
-        name:"heart",
-        skills:["Git","Github","Netlify","Google Colab","Render","VS Code"]
+      title: "Tools & platforms",
+      name: "heart",
+      skills: ["Git", "Github", "Netlify", "Google Colab", "Render", "VS Code"]
     }
-]
+  ];
+
   return (
     <div id="skills" className='mt-10'>
-        <h1 className='text-center font-bold text-3xl'>My Skills</h1>
-        <h1 className='mt-2 text-center text-gray-500 text-lg'> Here are my technical skills across various domains.</h1>
-        <div className="mt-10 grid grid-cols-1 place-items-center  md:grid-cols-2  gap-y-4 items-start">
-
-
-
-    
-        {data.map((d,i)=>(
-            <SkillCard key={i} title={d.title} name={d.name} skills={d.skills}/>
+      <h1 className='text-center font-bold text-3xl text-black dark:text-white'>My Skills</h1>
+      <h1 className='mt-2 text-center text-gray-500 dark:text-gray-300 text-lg'>
+        Here are my technical skills across various domains.
+      </h1>
+      <div className="mt-10 grid grid-cols-1 place-items-center md:grid-cols-2 gap-y-4 items-start">
+        {data.map((d, i) => (
+          <SkillCard key={i} title={d.title} name={d.name} skills={d.skills} />
         ))}
-       
+      </div>
     </div>
-    </div>
-  )
-}
+  );
+};
 
-export default Skills
+export default Skills;
